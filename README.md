@@ -19,3 +19,9 @@ Dieses Projekt ist ein gemeinsames Linux-Lernwiki.
 - git clone → Repository kopieren
 - git checkout -b → neuen Branch erstellen
 - git merge → Änderungen zusammenführen
+
+## Git Workflow
+
+- git clone → Repository kopieren
+- git checkout -b → neuen Branch erstellen
+- git merge → Änderungen zusammenführen
