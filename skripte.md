@@ -1,28 +1,51 @@
 # Linux Bash & Skripte 🧠
 
-Zurück zum Wiki: README.md
+Zurück zum [Wiki Start](README.md)
 
-## Basics
-- echo → Ausgabe
+---
+
+## ⚙️ Grundlagen
+
+- echo "text" → Ausgabe
 - bash script.sh → Skript ausführen
 
-## Pipes & Redirects
+---
+
+## 🔗 Pipes & Redirects
 
 | Symbol | Bedeutung |
 |------|-----------|
-| \| | verbindet Befehle (Pipe) |
-| > | überschreibt Datei |
-| >> | hängt an Datei an |
-| 2> | Fehlerausgabe umleiten |
+| | | Ausgabe verbinden |
+| > | Datei überschreiben |
+| >> | Datei anhängen |
+| 2> | Fehler umleiten |
 
-## Beispiele
-ls -l | grep txt
-cat file | wc -l
+---
 
-## Logik
-- && → nur wenn erfolgreich
+## 🧪 Beispiele
+
+ls -l | grep ".md"
+cat file.txt | wc -l
+
+---
+
+## 🔁 Logik
+
+- && → nur wenn vorher erfolgreich
 - || → wenn Fehler
 
-## Script Beispiel
+---
+
+## 📜 Beispiel Script
+
 #!/bin/bash
-echo "Hello Linux"
+
+echo "Start"
+ls -l
+echo "Ende"
+
+---
+
+## 🚀 Mini Automation
+
+mkdir test && cd test && touch file.txt
