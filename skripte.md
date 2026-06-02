@@ -6,18 +6,21 @@ Zurück zum Wiki: README.md
 - echo → Ausgabe
 - bash script.sh → Skript ausführen
 
-## Pipes
-- | → verbinden
-- > → überschreiben
-- >> → anhängen
-- 2> → Fehler
+## Pipes & Redirects
+
+| Symbol | Bedeutung |
+|------|-----------|
+| \| | verbindet Befehle (Pipe) |
+| > | überschreibt Datei |
+| >> | hängt an Datei an |
+| 2> | Fehlerausgabe umleiten |
 
 ## Beispiele
 ls -l | grep txt
 cat file | wc -l
 
 ## Logik
-- && → wenn erfolgreich
+- && → nur wenn erfolgreich
 - || → wenn Fehler
 
 ## Script Beispiel
