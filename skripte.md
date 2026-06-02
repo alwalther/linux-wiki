@@ -1,23 +1,25 @@
-# Linux Bash Skripte Grundlagen
+# Linux Bash & Skripte 🧠
 
-## Grundsyntax
+Zurück zum Wiki: README.md
 
-- echo "Text" → Ausgabe
+## Basics
+- echo → Ausgabe
 - bash script.sh → Skript ausführen
 
-## Pipes & Redirects
-
-- command1 | command2 → Ausgabe weiterleiten
+## Pipes
+- | → verbinden
 - > → überschreiben
 - >> → anhängen
-- 2> → Fehler umleiten
+- 2> → Fehler
 
 ## Beispiele
+ls -l | grep txt
+cat file | wc -l
 
-- ls -l | grep txt → nur txt Dateien filtern
-- cat datei.txt | wc -l → Zeilen zählen
+## Logik
+- && → wenn erfolgreich
+- || → wenn Fehler
 
-## Logische Operatoren
-
-- && → nur wenn vorher erfolgreich
-- || → wenn vorher fehlschlägt
+## Script Beispiel
+#!/bin/bash
+echo "Hello Linux"

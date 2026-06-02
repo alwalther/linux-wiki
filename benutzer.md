@@ -1,23 +1,21 @@
-# Linux Benutzerverwaltung
+# Linux Benutzer & Rechte 👤
+
+Zurück zum Wiki: README.md
 
 ## Benutzer
-
-- whoami → aktueller Benutzer
-- id → Benutzer- und Gruppen-ID anzeigen
-- adduser <name> → neuen Benutzer anlegen
-- deluser <name> → Benutzer löschen
+- whoami → aktueller User
+- id → User Info
+- adduser → erstellen
+- deluser → löschen
 
 ## Gruppen
-
-- groups → Gruppen anzeigen
-- usermod -aG <gruppe> <user> → User zur Gruppe hinzufügen
+- groups → anzeigen
+- usermod -aG → hinzufügen
 
 ## Rechte
-
+- ls -l → anzeigen
 - chmod → Rechte ändern
 - chown → Besitzer ändern
-- ls -l → Rechte anzeigen
 
 ## sudo
-
-- sudo <befehl> → als Admin ausführen
+- sudo → Admin Rechte

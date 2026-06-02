@@ -1,16 +1,25 @@
-# Linux Befehle
+# Linux Grundbefehle 🐧
 
-## Grundlegende Befehle
+Zurück zum Wiki: README.md
 
+## Navigation
 - ls → Dateien anzeigen
 - cd → Verzeichnis wechseln
-- pwd → aktuelles Verzeichnis anzeigen
+- pwd → aktuelles Verzeichnis
+
+## Dateien & Ordner
 - mkdir → Ordner erstellen
-- rm → Dateien löschen
-- cp → Dateien kopieren
-- mv → Dateien verschieben/umbenennen
+- touch → Datei erstellen
+- rm → löschen
+- cp → kopieren
+- mv → verschieben
 
-## Hilfe im Terminal
+## Dateiinhalt
+- cat → anzeigen
+- less → seitenweise
+- head → Anfang
+- tail → Ende
 
-- man <befehl> → Handbuchseite
-- --help → kurze Hilfeanzeige
+## Hilfe
+- man → Handbuch
+- --help → Hilfe

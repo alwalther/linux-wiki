@@ -1,38 +1,27 @@
-# Linux Wiki
+# Linux Wiki 📚
 
-Dieses Projekt ist ein gemeinsames Linux-Lernwiki.
+Willkommen im Linux Lernwiki.
 
-## Inhalte
+## 📌 Inhalte
 
-- Befehle
-- Netzwerk
-- Benutzerverwaltung
-- Bash-Skripte
+- [Befehle](befehle.md)
+- [Netzwerk](netzwerk.md)
+- [Benutzer & Rechte](benutzer.md)
+- [Bash & Skripte](skripte.md)
 
-## Ziele
-- Linux-Grundlagen dokumentieren
+---
+
+## 🎯 Lernziele
+
+- Linux Grundsystem verstehen
+- Terminal sicher bedienen
+- Netzwerk & Rechte verstehen
 - Git Workflow lernen
-- Zusammenarbeit über Branches und Commits
 
-## Git Workflow
+---
 
-- git clone → Repository kopieren
-- git checkout -b → neuen Branch erstellen
-- git merge → Änderungen zusammenführen
+## 🧠 Git Workflow
 
-## Git wird gebraucht für:
-- Versionierung
-- Zusammenarbeit
-- Branches
-- Pull Requests
-- Konflikte
-- Historie
-
-## Projektstruktur:
-linux-wiki/
-├── README.md
-├── befehle.md
-├── netzwerk.md
-├── benutzer.md
-└── skripte.md
-
+git add .
+git commit -m "message"
+git push

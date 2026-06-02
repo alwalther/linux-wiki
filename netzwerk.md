@@ -1,14 +1,21 @@
-# Linux Netzwerk Grundlagen
+# Linux Netzwerk 🌐
 
-## Grundbefehle
+Zurück zum Wiki: README.md
 
-- ip a → IP-Adressen anzeigen
-- ping <ziel> → Verbindung testen
-- ss -tulpen → offene Ports anzeigen
-- curl <url> → HTTP Anfrage senden
-- wget <url> → Datei herunterladen
+## IP & Interfaces
+- ip a → IP anzeigen
+- ip link → Netzwerkgeräte
+- hostname -I → schnelle IP
+
+## Verbindung testen
+- ping → Verbindung testen
+- curl → HTTP Anfrage
+- wget → Download
+
+## Ports
+- ss -tulpen → offene Ports
+- netstat → alt
 
 ## DNS & Routing
-
-- /etc/resolv.conf → DNS Konfiguration
-- ip route → Routing Tabelle anzeigen
+- resolv.conf → DNS
+- ip route → Routing Tabelle
