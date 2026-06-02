@@ -1,10 +1,10 @@
 # Linux Wiki 📚
 
-Ein strukturiertes Lernwiki für Linux, Bash und Git.
+Ein gemeinsames Lernwiki zu Linux, Bash und Git.
 
 ---
 
-## 📖 Kapitel
+## 📖 Inhalte
 
 - [Grundbefehle](befehle.md)
 - [Netzwerk](netzwerk.md)
@@ -15,26 +15,65 @@ Ein strukturiertes Lernwiki für Linux, Bash und Git.
 
 ## 🎯 Lernziele
 
-Dieses Wiki hilft dir dabei:
+Dieses Wiki vermittelt die Grundlagen von Linux:
 
-- Linux sicher im Terminal zu bedienen
-- Dateien & Prozesse zu verstehen
-- Netzwerke zu analysieren
-- Rechte & Benutzer zu verwalten
-- Bash-Skripte zu schreiben
+- Arbeiten mit Dateien und Ordnern
+- Benutzer- und Rechteverwaltung
+- Netzwerkdiagnose und Fernzugriff
+- Bash-Skripte und Automatisierung
+- Versionsverwaltung mit Git
+
+---
+
+## 🌳 Projektstruktur
+
+- README.md
+- befehle.md
+- netzwerk.md
+- benutzer.md
+- skripte.md
 
 ---
 
 ## 🧠 Git Workflow
 
-Typischer Ablauf:
+Repository aktualisieren:
+
+git pull
+
+Änderungen prüfen:
+
+git status
+
+Dateien zum Commit vormerken:
 
 git add .
-git commit -m "update"
+
+Commit erstellen:
+
+git commit -m "Beschreibung"
+
+Änderungen hochladen:
+
 git push
 
 ---
 
-## 💡 Tipp
+## 🔗 Nützliche Befehle
 
-Nutze `man <befehl>` für detaillierte Hilfe.
+Handbuch anzeigen:
+
+man <befehl>
+
+Kurzhilfe anzeigen:
+
+<befehl> --help
+
+---
+
+## 📚 Quellen
+
+- Linux Manpages
+- Distribution-Dokumentationen
+- Eigene Übungen und Beispiele
+
