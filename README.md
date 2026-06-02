@@ -20,8 +20,19 @@ Dieses Projekt ist ein gemeinsames Linux-Lernwiki.
 - git checkout -b → neuen Branch erstellen
 - git merge → Änderungen zusammenführen
 
-## Git Workflow
+## Git wird gebraucht für:
+- Versionierung
+- Zusammenarbeit
+- Branches
+- Pull Requests
+- Konflikte
+- Historie
 
-- git clone → Repository kopieren
-- git checkout -b → neuen Branch erstellen
-- git merge → Änderungen zusammenführen
+## Projektstruktur:
+linux-wiki/
+├── README.md
+├── befehle.md
+├── netzwerk.md
+├── benutzer.md
+└── skripte.md
+
