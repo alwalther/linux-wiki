@@ -13,3 +13,9 @@ Dieses Projekt ist ein gemeinsames Linux-Lernwiki.
 - Linux-Grundlagen dokumentieren
 - Git Workflow lernen
 - Zusammenarbeit über Branches und Commits
+
+## Git Workflow
+
+- git clone → Repository kopieren
+- git checkout -b → neuen Branch erstellen
+- git merge → Änderungen zusammenführen
