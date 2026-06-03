@@ -4,25 +4,25 @@ Zurück zum [Wiki Start](README.md)
 
 ## Verwandte Themen
 
-- [Grundbefehle](befehle.md)
-- [Benutzer & Rechte](benutzer.md)
-- [Bash & Skripte](skripte.md)
+* [Grundbefehle](befehle.md)
+* [Benutzer & Rechte](benutzer.md)
+* [Bash & Skripte](skripte.md)
 
 ---
 
 ## Inhalt
 
-- Netzwerkgrundlagen
-- IP-Adressen & Interfaces
-- Verbindung testen
-- DNS
-- Routing
-- SSH
-- SSH-Schlüssel
-- Dateiübertragung
-- Netzwerkanalyse
-- NetworkManager
-- Hilfe
+* Netzwerkgrundlagen
+* IP-Adressen & Interfaces
+* Verbindung testen
+* DNS
+* Routing
+* SSH
+* SSH-Schlüssel
+* Dateiübertragung
+* Netzwerkanalyse
+* NetworkManager
+* Hilfe
 
 ---
 
@@ -32,51 +32,35 @@ Jedes Gerät in einem Netzwerk besitzt eine eindeutige IP-Adresse.
 
 Wichtige Begriffe:
 
-- IP-Adresse
-- Subnetzmaske
-- Gateway
-- DNS-Server
-- MAC-Adresse
+* IP-Adresse
+* Subnetzmaske
+* Gateway
+* DNS-Server
+* MAC-Adresse
 
 ---
 
 ## IP-Adressen & Interfaces
 
-Alle Netzwerkinterfaces anzeigen:
+ip a → Alle Netzwerkinterfaces anzeigen
 
-ip a
+ip link → Netzwerkgeräte anzeigen
 
-Netzwerkgeräte anzeigen:
+hostname -I → IP-Adresse schnell anzeigen
 
-ip link
-
-IP-Adresse schnell anzeigen:
-
-hostname -I
-
-Detaillierte Informationen anzeigen:
-
-ip addr show
+ip addr show → Detaillierte Informationen anzeigen
 
 ---
 
 ## Verbindung testen
 
-Erreichbarkeit eines Hosts prüfen:
+ping google.com → Erreichbarkeit eines Hosts prüfen
 
-ping google.com
+ping -c 4 google.com → Nur 4 Pakete senden
 
-Nur 4 Pakete senden:
+curl [https://example.com](https://example.com) → Webseite abrufen
 
-ping -c 4 google.com
-
-Webseite abrufen:
-
-curl https://example.com
-
-Datei herunterladen:
-
-wget https://example.com/datei.txt
+wget [https://example.com/datei.txt](https://example.com/datei.txt) → Datei herunterladen
 
 ---
 
@@ -84,33 +68,21 @@ wget https://example.com/datei.txt
 
 DNS übersetzt Hostnamen in IP-Adressen.
 
-DNS-Server anzeigen:
+cat /etc/resolv.conf → DNS-Server anzeigen
 
-cat /etc/resolv.conf
+dig openai.com → DNS-Abfrage durchführen
 
-DNS-Abfrage durchführen:
+resolvectl status → DNS-Konfiguration anzeigen
 
-dig openai.com
-
-DNS-Konfiguration anzeigen:
-
-resolvectl status
-
-Namensauflösung testen:
-
-host openai.com
+host openai.com → Namensauflösung testen
 
 ---
 
 ## Routing
 
-Routingtabelle anzeigen:
+ip route → Routingtabelle anzeigen
 
-ip route
-
-Standard-Gateway anzeigen:
-
-ip route | grep default
+ip route | grep default → Standard-Gateway anzeigen
 
 Beispiel:
 
@@ -122,93 +94,63 @@ default via 192.168.1.1 dev wlan0
 
 SSH ermöglicht den sicheren Fernzugriff auf Linux-Systeme.
 
-Verbindung herstellen:
+ssh user@server → Verbindung herstellen
 
-ssh user@server
-
-Beispiel:
-
-ssh admin@192.168.1.100
+ssh admin@192.168.1.100 → Beispiel
 
 SSH wird häufig zusammen mit Benutzerkonten verwendet.
 
 Siehe auch:
 
-- [Benutzer & Rechte](benutzer.md)
+* [Benutzer & Rechte](benutzer.md)
 
 ---
 
 ## SSH-Schlüssel
 
-Neuen Schlüssel erzeugen:
+ssh-keygen -t ed25519 → Neuen Schlüssel erzeugen
 
-ssh-keygen -t ed25519
+cat ~/.ssh/id_ed25519.pub → Öffentlichen Schlüssel anzeigen
 
-Öffentlichen Schlüssel anzeigen:
-
-cat ~/.ssh/id_ed25519.pub
-
-Schlüssel auf Server kopieren:
-
-ssh-copy-id user@server
+ssh-copy-id user@server → Schlüssel auf Server kopieren
 
 Vorteile:
 
-- keine Passwortübertragung
-- höhere Sicherheit
-- automatisierte Anmeldungen
+* keine Passwortübertragung
+* höhere Sicherheit
+* automatisierte Anmeldungen
 
 ---
 
 ## Dateiübertragung
 
-Datei per SCP kopieren:
+scp datei.txt user@server:/home/user/ → Datei per SCP kopieren
 
-scp datei.txt user@server:/home/user/
+scp -r ordner user@server:/home/user/ → Verzeichnis kopieren
 
-Verzeichnis kopieren:
-
-scp -r ordner user@server:/home/user/
-
-SFTP starten:
-
-sftp user@server
+sftp user@server → SFTP starten
 
 ---
 
 ## Netzwerkanalyse
 
-ARP-Tabelle anzeigen:
+arp -a → ARP-Tabelle anzeigen
 
-arp -a
+ss -tulpen → Offene Verbindungen anzeigen
 
-Offene Verbindungen anzeigen:
+nmap 192.168.1.0/24 → Netzwerkscan durchführen
 
-ss -tulpen
-
-Netzwerkscan durchführen:
-
-nmap 192.168.1.0/24
-
-Domaininformationen abrufen:
-
-whois openai.com
+whois openai.com → Domaininformationen abrufen
 
 ---
 
 ## NetworkManager
 
-Status anzeigen:
+nmcli device status → Status anzeigen
 
-nmcli device status
+nmcli connection show → Verbindungen anzeigen
 
-Verbindungen anzeigen:
-
-nmcli connection show
-
-WLANs suchen:
-
-nmcli device wifi list
+nmcli device wifi list → WLANs suchen
 
 ---
 
@@ -238,17 +180,13 @@ DNS-Konfiguration prüfen.
 
 ## Hilfe
 
-Handbuch anzeigen:
+man ip → Handbuch anzeigen
 
-man ip
-
-Handbuch für SSH:
-
-man ssh
+man ssh → Handbuch für SSH
 
 Weitere Themen:
 
-- [Grundbefehle](befehle.md)
-- [Benutzer & Rechte](benutzer.md)
-- [Bash & Skripte](skripte.md)
+* [Grundbefehle](befehle.md)
+* [Benutzer & Rechte](benutzer.md)
+* [Bash & Skripte](skripte.md)
 

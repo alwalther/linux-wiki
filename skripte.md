@@ -4,25 +4,25 @@ Zurück zum [Wiki Start](README.md)
 
 ## Verwandte Themen
 
-- [Grundbefehle](befehle.md)
-- [Netzwerk](netzwerk.md)
-- [Benutzer & Rechte](benutzer.md)
+* [Grundbefehle](befehle.md)
+* [Netzwerk](netzwerk.md)
+* [Benutzer & Rechte](benutzer.md)
 
 ---
 
 ## Inhalt
 
-- Bash Grundlagen
-- Variablen
-- Ein- und Ausgabe
-- Pipes
-- Redirects
-- Textverarbeitung
-- Befehlsverlauf
-- Aliase
-- Shell-Konfiguration
-- Beispielskripte
-- Hilfe
+* Bash Grundlagen
+* Variablen
+* Ein- und Ausgabe
+* Pipes
+* Redirects
+* Textverarbeitung
+* Befehlsverlauf
+* Aliase
+* Shell-Konfiguration
+* Beispielskripte
+* Hilfe
 
 ---
 
@@ -30,17 +30,11 @@ Zurück zum [Wiki Start](README.md)
 
 Ein Bash-Skript ist eine Textdatei mit Befehlen.
 
-Ausführbar machen:
+chmod +x script.sh → Ausführbar machen
 
-chmod +x script.sh
+./script.sh → Skript ausführen
 
-Skript ausführen:
-
-./script.sh
-
-Alternativ:
-
-bash script.sh
+bash script.sh → Alternativ
 
 Erste Zeile eines Skripts:
 
@@ -50,37 +44,23 @@ Erste Zeile eines Skripts:
 
 ## Variablen
 
-Variable setzen:
+NAME="Linux" → Variable setzen
 
-NAME="Linux"
+echo $NAME → Variable ausgeben
 
-Variable ausgeben:
+read NAME → Benutzereingabe
 
-echo $NAME
-
-Benutzereingabe:
-
-read NAME
-
-Ausgabe:
-
-echo "Hallo $NAME"
+echo "Hallo $NAME" → Ausgabe
 
 ---
 
 ## Ein- und Ausgabe
 
-Text ausgeben:
+echo "Hallo Welt" → Text ausgeben
 
-echo "Hallo Welt"
+cat datei.txt → Datei anzeigen
 
-Datei anzeigen:
-
-cat datei.txt
-
-Zeilen zählen:
-
-wc -l datei.txt
+wc -l datei.txt → Zeilen zählen
 
 ---
 
@@ -92,37 +72,25 @@ Beispiel:
 
 ls -l | grep ".txt"
 
-Anzahl der Dateien zählen:
+ls | wc -l → Anzahl der Dateien zählen
 
-ls | wc -l
-
-Netzwerkports filtern:
-
-ss -tulpen | grep ssh
+ss -tulpen | grep ssh → Netzwerkports filtern
 
 Weitere Befehle:
 
-- [Grundbefehle](befehle.md)
+* [Grundbefehle](befehle.md)
 
 ---
 
 ## Redirects
 
-Ausgabe in Datei schreiben:
+ls > dateien.txt → Ausgabe in Datei schreiben
 
-ls > dateien.txt
+date >> log.txt → An Datei anhängen
 
-An Datei anhängen:
+command 2> fehler.log → Fehler umleiten
 
-date >> log.txt
-
-Fehler umleiten:
-
-command 2> fehler.log
-
-Alles umleiten:
-
-command > ausgabe.log 2>&1
+command > ausgabe.log 2>&1 → Alles umleiten
 
 ---
 
@@ -130,125 +98,83 @@ command > ausgabe.log 2>&1
 
 ### grep
 
-Text suchen:
+grep "Fehler" logfile.txt → Text suchen
 
-grep "Fehler" logfile.txt
-
-Groß-/Kleinschreibung ignorieren:
-
-grep -i "linux" datei.txt
+grep -i "linux" datei.txt → Groß-/Kleinschreibung ignorieren
 
 ---
 
 ### cut
 
-Erstes Feld ausgeben:
-
-cut -d: -f1 /etc/passwd
+cut -d: -f1 /etc/passwd → Erstes Feld ausgeben
 
 ---
 
 ### sort
 
-Datei sortieren:
+sort datei.txt → Datei sortieren
 
-sort datei.txt
-
-Numerisch sortieren:
-
-sort -n zahlen.txt
+sort -n zahlen.txt → Numerisch sortieren
 
 ---
 
 ### uniq
 
-Doppelte Zeilen entfernen:
+sort namen.txt | uniq → Doppelte Zeilen entfernen
 
-sort namen.txt | uniq
-
-Zeilen zählen:
-
-sort namen.txt | uniq -c
+sort namen.txt | uniq -c → Zeilen zählen
 
 ---
 
 ### awk
 
-Erste Spalte ausgeben:
+awk '{print $1}' datei.txt → Erste Spalte ausgeben
 
-awk '{print $1}' datei.txt
-
-Mehrere Spalten:
-
-awk '{print $1,$3}' datei.txt
+awk '{print $1,$3}' datei.txt → Mehrere Spalten
 
 ---
 
 ### sed
 
-Text ersetzen:
+sed 's/alt/neu/g' datei.txt → Text ersetzen
 
-sed 's/alt/neu/g' datei.txt
-
-Zeilen anzeigen:
-
-sed -n '1,10p' datei.txt
+sed -n '1,10p' datei.txt → Zeilen anzeigen
 
 ---
 
 ### xargs
 
-Dateien löschen:
-
-find . -name "*.tmp" | xargs rm
+find . -name "*.tmp" | xargs rm → Dateien löschen
 
 ---
 
 ## Befehlsverlauf
 
-Verlauf anzeigen:
+history → Verlauf anzeigen
 
-history
+!! → Letzten Befehl wiederholen
 
-Letzten Befehl wiederholen:
-
-!!
-
-Befehl Nummer 100 ausführen:
-
-!100
+!100 → Befehl Nummer 100 ausführen
 
 ---
 
 ## Aliase
 
-Alias erstellen:
+alias ll='ls -lah' → Alias erstellen
 
-alias ll='ls -lah'
+alias → Aliase anzeigen
 
-Aliase anzeigen:
-
-alias
-
-Alias entfernen:
-
-unalias ll
+unalias ll → Alias entfernen
 
 ---
 
 ## Shell-Konfiguration
 
-Benutzerspezifische Bash-Konfiguration:
+~/.bashrc → Benutzerspezifische Bash-Konfiguration
 
-~/.bashrc
+nano ~/.bashrc → Bearbeiten
 
-Bearbeiten:
-
-nano ~/.bashrc
-
-Neu laden:
-
-source ~/.bashrc
+source ~/.bashrc → Neu laden
 
 ---
 
@@ -282,32 +208,28 @@ echo "Dateien: $ANZAHL"
 
 Skripte können genutzt werden für:
 
-- Backups
-- Logauswertung
-- Softwareinstallation
-- Benutzerverwaltung
-- Netzwerkprüfungen
+* Backups
+* Logauswertung
+* Softwareinstallation
+* Benutzerverwaltung
+* Netzwerkprüfungen
 
 Siehe auch:
 
-- [Netzwerk](netzwerk.md)
-- [Benutzer & Rechte](benutzer.md)
+* [Netzwerk](netzwerk.md)
+* [Benutzer & Rechte](benutzer.md)
 
 ---
 
 ## Hilfe
 
-Handbuch:
+man bash → Handbuch
 
-man bash
-
-Dokumentation:
-
-help
+help → Dokumentation
 
 Weitere Themen:
 
-- [Grundbefehle](befehle.md)
-- [Netzwerk](netzwerk.md)
-- [Benutzer & Rechte](benutzer.md)
+* [Grundbefehle](befehle.md)
+* [Netzwerk](netzwerk.md)
+* [Benutzer & Rechte](benutzer.md)
 

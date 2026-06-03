@@ -4,96 +4,66 @@ Zurück zum [Wiki Start](README.md)
 
 ## Verwandte Themen
 
-- [Grundbefehle](befehle.md)
-- [Netzwerk](netzwerk.md)
-- [Bash & Skripte](skripte.md)
+* [Grundbefehle](befehle.md)
+* [Netzwerk](netzwerk.md)
+* [Bash & Skripte](skripte.md)
 
 ---
 
 ## Inhalt
 
-- Benutzerkonten
-- Gruppen
-- Benutzerinformationen
-- Rechtekonzept
-- chmod
-- chown
-- sudo
-- Passwörter
-- Wichtige Dateien
-- Hilfe
+* Benutzerkonten
+* Gruppen
+* Benutzerinformationen
+* Rechtekonzept
+* chmod
+* chown
+* sudo
+* Passwörter
+* Wichtige Dateien
+* Hilfe
 
 ---
 
 ## Benutzerkonten
 
-Aktuellen Benutzer anzeigen:
+whoami → Aktuellen Benutzer anzeigen
 
-whoami
+id → Benutzerinformationen anzeigen
 
-Benutzerinformationen anzeigen:
+sudo adduser benutzername → Neuen Benutzer anlegen
 
-id
+sudo deluser benutzername → Benutzer löschen
 
-Neuen Benutzer anlegen:
-
-sudo adduser benutzername
-
-Benutzer löschen:
-
-sudo deluser benutzername
-
-Benutzer mit Home-Verzeichnis löschen:
-
-sudo deluser --remove-home benutzername
+sudo deluser --remove-home benutzername → Benutzer mit Home-Verzeichnis löschen
 
 ---
 
 ## Gruppen
 
-Gruppen eines Benutzers anzeigen:
+groups → Gruppen eines Benutzers anzeigen
 
-groups
+sudo groupadd gruppenname → Neue Gruppe anlegen
 
-Neue Gruppe anlegen:
+sudo usermod -aG gruppe benutzer → Benutzer einer Gruppe hinzufügen
 
-sudo groupadd gruppenname
+sudo gpasswd -d benutzer gruppe → Benutzer aus Gruppe entfernen
 
-Benutzer einer Gruppe hinzufügen:
-
-sudo usermod -aG gruppe benutzer
-
-Benutzer aus Gruppe entfernen:
-
-sudo gpasswd -d benutzer gruppe
-
-Alle Gruppen anzeigen:
-
-cat /etc/group
+cat /etc/group → Alle Gruppen anzeigen
 
 ---
 
 ## Benutzerinformationen
 
-Benutzerdaten ändern:
+chfn → Benutzerdaten ändern
 
-chfn
+chsh → Login-Shell ändern
 
-Login-Shell ändern:
+id → UID und Gruppen anzeigen
 
-chsh
+who → Aktive Benutzer anzeigen
 
-UID und Gruppen anzeigen:
-
-id
-
-Aktive Benutzer anzeigen:
-
-who
-
-Letzte Anmeldungen anzeigen:
-
-last
+last → Letzte Anmeldungen anzeigen
 
 ---
 
@@ -131,11 +101,9 @@ Andere: lesen, ausführen
 
 ## chmod
 
-Rechte numerisch setzen:
+chmod 755 datei → Rechte numerisch setzen
 
-chmod 755 datei
-
-chmod 644 datei
+chmod 644 datei → Rechte numerisch setzen
 
 Bedeutung:
 
@@ -147,92 +115,62 @@ Bedeutung:
 
 4 = r--
 
-Rechte symbolisch setzen:
+chmod u+x script.sh → Rechte symbolisch setzen
 
-chmod u+x script.sh
-
-chmod g-w datei.txt
+chmod g-w datei.txt → Rechte symbolisch setzen
 
 ---
 
 ## chown
 
-Besitzer ändern:
+sudo chown benutzer datei.txt → Besitzer ändern
 
-sudo chown benutzer datei.txt
+sudo chown benutzer:gruppe datei.txt → Besitzer und Gruppe ändern
 
-Besitzer und Gruppe ändern:
-
-sudo chown benutzer:gruppe datei.txt
-
-Rekursiv anwenden:
-
-sudo chown -R benutzer:gruppe verzeichnis
+sudo chown -R benutzer:gruppe verzeichnis → Rekursiv anwenden
 
 ---
 
 ## sudo
 
-Befehl mit Administratorrechten ausführen:
+sudo befehl → Befehl mit Administratorrechten ausführen
 
-sudo befehl
+sudo -i → Root-Shell starten
 
-Root-Shell starten:
-
-sudo -i
-
-sudo-Konfiguration bearbeiten:
-
-sudo visudo
+sudo visudo → sudo-Konfiguration bearbeiten
 
 ---
 
 ## Passwörter
 
-Eigenes Passwort ändern:
+passwd → Eigenes Passwort ändern
 
-passwd
+sudo passwd benutzer → Passwort eines Benutzers ändern
 
-Passwort eines Benutzers ändern:
+sudo passwd -l benutzer → Benutzer sperren
 
-sudo passwd benutzer
-
-Benutzer sperren:
-
-sudo passwd -l benutzer
-
-Benutzer entsperren:
-
-sudo passwd -u benutzer
+sudo passwd -u benutzer → Benutzer entsperren
 
 ---
 
 ## Wichtige Dateien
 
-Benutzerkonten:
+/etc/passwd → Benutzerkonten
 
-/etc/passwd
+/etc/group → Gruppen
 
-Gruppen:
+/etc/shadow → Passwortinformationen
 
-/etc/group
-
-Passwortinformationen:
-
-/etc/shadow
-
-sudo-Konfiguration:
-
-/etc/sudoers
+/etc/sudoers → sudo-Konfiguration
 
 ---
 
 ## Sicherheitshinweise
 
-- Root nur verwenden, wenn nötig
-- sudo sparsam einsetzen
-- starke Passwörter verwenden
-- SSH-Schlüssel bevorzugen
+* Root nur verwenden, wenn nötig
+* sudo sparsam einsetzen
+* starke Passwörter verwenden
+* SSH-Schlüssel bevorzugen
 
 Weitere Informationen zu SSH:
 
@@ -242,17 +180,15 @@ Siehe [Netzwerk](netzwerk.md)
 
 ## Hilfe
 
-Handbuch anzeigen:
+man chmod → Handbuch anzeigen
 
-man chmod
+man chown → Handbuch anzeigen
 
-man chown
-
-man sudo
+man sudo → Handbuch anzeigen
 
 Weitere Themen:
 
-- [Grundbefehle](befehle.md)
-- [Netzwerk](netzwerk.md)
-- [Bash & Skripte](skripte.md)
+* [Grundbefehle](befehle.md)
+* [Netzwerk](netzwerk.md)
+* [Bash & Skripte](skripte.md)
 

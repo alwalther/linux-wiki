@@ -4,109 +4,73 @@ Zurück zum [Wiki Start](README.md)
 
 ## Verwandte Themen
 
-- [Netzwerk](netzwerk.md)
-- [Benutzer & Rechte](benutzer.md)
-- [Bash & Skripte](skripte.md)
+* [Netzwerk](netzwerk.md)
+* [Benutzer & Rechte](benutzer.md)
+* [Bash & Skripte](skripte.md)
 
 ---
 
 ## Inhalt
 
-- Navigation
-- Dateien & Ordner
-- Dateiinhalt anzeigen
-- Dateisuche
-- Dateiinformationen
-- Links
-- Archivierung & Backup
-- Speicherplatz
-- Softwareverwaltung
-- Systeminformationen
-- Hilfe
+* Navigation
+* Dateien & Ordner
+* Dateiinhalt anzeigen
+* Dateisuche
+* Dateiinformationen
+* Links
+* Archivierung & Backup
+* Speicherplatz
+* Softwareverwaltung
+* Systeminformationen
+* Hilfe
 
 ---
 
 ## Navigation
 
-Aktuelles Verzeichnis anzeigen:
+pwd → Aktuelles Verzeichnis anzeigen
 
-pwd
+ls → Verzeichnisinhalt anzeigen
 
-Verzeichnisinhalt anzeigen:
+ls -l → Detaillierte Ansicht
 
-ls
+ls -la → Versteckte Dateien anzeigen
 
-Detaillierte Ansicht:
+cd /pfad/zum/verzeichnis → Verzeichnis wechseln
 
-ls -l
-
-Versteckte Dateien anzeigen:
-
-ls -la
-
-Verzeichnis wechseln:
-
-cd /pfad/zum/verzeichnis
-
-Ins Home-Verzeichnis wechseln:
-
-cd ~
+cd ~ → Ins Home-Verzeichnis wechseln
 
 ---
 
 ## Dateien & Ordner
 
-Datei erstellen:
+touch datei.txt → Datei erstellen
 
-touch datei.txt
+mkdir ordner → Ordner erstellen
 
-Ordner erstellen:
+cp quelle.txt ziel.txt → Datei kopieren
 
-mkdir ordner
+mv alt.txt neu.txt → Datei verschieben oder umbenennen
 
-Datei kopieren:
+rm datei.txt → Datei löschen
 
-cp quelle.txt ziel.txt
+rm -r ordner → Ordner rekursiv löschen
 
-Datei verschieben oder umbenennen:
-
-mv alt.txt neu.txt
-
-Datei löschen:
-
-rm datei.txt
-
-Ordner rekursiv löschen:
-
-rm -r ordner
-
-Leeren Ordner löschen:
-
-rmdir ordner
+rmdir ordner → Leeren Ordner löschen
 
 ---
 
 ## Dateiinhalt anzeigen
 
-Kompletten Inhalt anzeigen:
+cat datei.txt → Kompletten Inhalt anzeigen
 
-cat datei.txt
+less datei.txt → Seitenweise anzeigen
 
-Seitenweise anzeigen:
+head datei.txt → Erste 10 Zeilen
 
-less datei.txt
+tail datei.txt → Letzte 10 Zeilen
 
-Erste 10 Zeilen:
-
-head datei.txt
-
-Letzte 10 Zeilen:
-
-tail datei.txt
-
-Zeilen zählen:
-
-wc -l datei.txt
+wc -l datei.txt → Zeilen zählen
 
 Weitere Textverarbeitung wird in [Bash & Skripte](skripte.md) behandelt.
 
@@ -114,157 +78,97 @@ Weitere Textverarbeitung wird in [Bash & Skripte](skripte.md) behandelt.
 
 ## Dateisuche
 
-Dateien rekursiv suchen:
+find . -name "*.txt" → Dateien rekursiv suchen
 
-find . -name "*.txt"
+find . -type f → Dateien nach Typ suchen
 
-Dateien nach Typ suchen:
+find . -type d → Ordner suchen
 
-find . -type f
+locate dateiname → Schnelle Suche über Datenbank
 
-Ordner suchen:
-
-find . -type d
-
-Schnelle Suche über Datenbank:
-
-locate dateiname
-
-Suchdatenbank aktualisieren:
-
-sudo updatedb
+sudo updatedb → Suchdatenbank aktualisieren
 
 ---
 
 ## Dateiinformationen
 
-Dateityp bestimmen:
+file datei.txt → Dateityp bestimmen
 
-file datei.txt
+stat datei.txt → Dateidetails anzeigen
 
-Dateidetails anzeigen:
-
-stat datei.txt
-
-Prüfsumme berechnen:
-
-md5sum image.iso
+md5sum image.iso → Prüfsumme berechnen
 
 ---
 
 ## Links
 
-Softlink erstellen:
+ln -s quelle ziel → Softlink erstellen
 
-ln -s quelle ziel
-
-Hardlink erstellen:
-
-ln quelle ziel
+ln quelle ziel → Hardlink erstellen
 
 ---
 
 ## Archivierung & Backup
 
-Archiv erstellen:
+tar -czf backup.tar.gz ordner/ → Archiv erstellen
 
-tar -czf backup.tar.gz ordner/
+tar -xzf backup.tar.gz → Archiv entpacken
 
-Archiv entpacken:
-
-tar -xzf backup.tar.gz
-
-Verzeichnisse synchronisieren:
-
-rsync -av quelle/ ziel/
+rsync -av quelle/ ziel/ → Verzeichnisse synchronisieren
 
 ---
 
 ## Speicherplatz
 
-Datenträgerbelegung anzeigen:
+df -h → Datenträgerbelegung anzeigen
 
-df -h
+du -sh * → Ordnergrößen anzeigen
 
-Ordnergrößen anzeigen:
+lsblk → Blockgeräte anzeigen
 
-du -sh *
-
-Blockgeräte anzeigen:
-
-lsblk
-
-Eingehängte Dateisysteme anzeigen:
-
-mount
+mount → Eingehängte Dateisysteme anzeigen
 
 ---
 
 ## Softwareverwaltung
 
-Paketliste aktualisieren:
+sudo apt update → Paketliste aktualisieren
 
-sudo apt update
+sudo apt upgrade → Pakete aktualisieren
 
-Pakete aktualisieren:
+sudo apt install paketname → Paket installieren
 
-sudo apt upgrade
+sudo apt remove paketname → Paket entfernen
 
-Paket installieren:
-
-sudo apt install paketname
-
-Paket entfernen:
-
-sudo apt remove paketname
-
-Installierte Pakete suchen:
-
-apt list --installed
+apt list --installed → Installierte Pakete suchen
 
 ---
 
 ## Systeminformationen
 
-Kernel anzeigen:
+uname -a → Kernel anzeigen
 
-uname -a
+hostname → Hostname anzeigen
 
-Hostname anzeigen:
+hostnamectl → Hostinformationen anzeigen
 
-hostname
+lsb_release -a → Distribution anzeigen
 
-Hostinformationen anzeigen:
+uptime → Systemlaufzeit anzeigen
 
-hostnamectl
-
-Distribution anzeigen:
-
-lsb_release -a
-
-Systemlaufzeit anzeigen:
-
-uptime
-
-Aktuelles Datum:
-
-date
+date → Aktuelles Datum
 
 ---
 
 ## Hilfe
 
-Handbuch anzeigen:
+man befehl → Handbuch anzeigen
 
-man befehl
-
-Kurzhilfe anzeigen:
-
-befehl --help
+befehl --help → Kurzhilfe anzeigen
 
 Siehe auch:
 
-- [Netzwerk](netzwerk.md)
-- [Benutzer & Rechte](benutzer.md)
-- [Bash & Skripte](skripte.md)
+* [Netzwerk](netzwerk.md)
+* [Benutzer & Rechte](benutzer.md)
+* [Bash & Skripte](skripte.md)
 

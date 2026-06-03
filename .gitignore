@@ -1,10 +1,15 @@
+# Logs
+*.log
+
 # Temporäre Dateien
 *.tmp
-*.log
 
 # Linux / Editor Dateien
 *~
 *.swp
+
+# Linux system files
+.DS_Store
 
 # Thumbnails
 .thumbs/
